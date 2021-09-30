@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    html {
+      font-size: 10px;
+    }
+    body {
+      background-color: rgb(54, 54, 54);
+      
+      color: grey;
+      font-family: Helvetica, sans-serif;
+      font-size: 1.6rem;
+
+      /* set the fixed height */
+      height: 100vh;
+
+      /* center the only child */
+      display: grid;
+      place-items: center;
+    }
+    .card {
+      /* stand out */
+      background: #000;
+
+      /* set the width and height */
+      max-width: 70vw;
+      min-height: 70vh;
+
+      /* child into 2 column */
+      display: flex;
+
+
+    }
+      .card > * {
+        /* stand out */
+        outline: 1px solid grey;
+
+        /* child into 2 column */
+        flex: 100% 1 1;
+      }
+      .card .image {
+        /* special */
+      }
+      .card .faq {
+        /* parent space  */
+        padding: 10px;
+
+      }
+        .card .box {
+          /* stand out */
+          outline: 1px solid grey;
+
+          /* sibling space */
+          margin: 30px 0;
+
+          /* child space */
+          padding: 10px;
+          
+        }
+          .card .box > * {
+            /* stand out */
+            outline: 1px solid grey;
+
+          }
+          .card .ans {
+            /* intially disappear */
+            
+          }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- table of content   
+    body > .card > .image > img 
+                 > .faq   > .box*4 > .ques > img-icon
+                                   > .ans
+   -->
+  <div class="card">
+    <div class="image"><img src="images/illustration-woman-online-desktop.svg" alt="illustration"></div>
+
+    <div class="faq">
+
+      <div class="box">
+        <div class="ques">How many team members can I invite?
+          <img src="images/icon-arrow-down.svg" alt="arrow">
+        </div>
+        <div class="ans">You can invite up to 2 additional users on the Free plan. There is no limit on 
+          team members for the Premium plan.</div>
+      </div>
+
+
+      <div class="box">
+        <div class="ques">What is the maximum file upload size?
+          <img src="images/icon-arrow-down.svg" alt="arrow">
+        </div>
+        <div class="ans">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+      </div>
+
+
+      <div class="box">
+        <div class="ques">How do I reset my password?
+          <img src="images/icon-arrow-down.svg" alt="arrow">
+        </div>
+        <div class="ans">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</div>
+      </div>
+
+
+      <div class="box">
+        <div class="ques">Can I cancel my subscription?
+          <img src="images/icon-arrow-down.svg" alt="arrow">
+        </div>
+        <div class="ans">Yes! Send us a message and we’ll process your request no questions asked.</div>
+      </div>
+
+
+      <div class="box">
+        <div class="ques">Do you provide additional support?
+          <img src="images/icon-arrow-down.svg" alt="arrow">
+        </div>
+        <div class="ans">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script>
+    let quesEls = document.body.querySelectorAll(".ques");
+    let ansEls = document.body.querySelectorAll('.ans');
+
+    for (let i = 0; i < quesEls.length; i++) {
+      quesEls[i].onclick = onOffAns;
+
+      function onOffAns() {
+        if (ansEls[i].hidden) {
+          ansEls[i].hidden = false; 
+        } else {
+          ansEls[i].hidden = true;
+        }
+      }
+    }
+
+
+  </script>
+</body>
+</html>

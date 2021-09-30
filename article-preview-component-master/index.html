@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      position: relative;
+
+    }
+    body {
+      color: grey;
+      background-color: #fff;
+      font-family: Helvetica, sans-serif;
+
+      /* center child */
+      display: grid;
+      place-items: center;
+
+      /* set size */
+      height: 100vh;
+
+    }
+    .card { 
+      /* stand out */
+      background: black;
+
+      /* horizontal */
+      display: flex;
+
+      /* set size */
+      width: 70vw;
+      height: 70vh;
+
+    }
+      .card > * {
+        outline: 1px solid grey;
+
+      }
+      .card .hero {
+        /* special */
+        /* set size */
+        flex: 2;
+      }
+        .card .hero img {
+          display: block;
+          width: 100%;
+        }
+
+      .card .content {
+        flex: 3;
+
+        /* space child */
+        padding: 10px;
+
+      }
+        .card .content > * {
+          outline: 1px solid grey;
+
+          /* sibling space */
+          margin: 30px 0;
+
+        }
+        .card .box {
+          /* stand out */
+          background-color: #fff;
+
+          /* horizontal */
+          display: flex;
+
+
+        }
+          .card .box > * {
+            outline: 1px solid grey;
+          }
+          .card .share-box {
+            position: absolute;
+
+            right: 0;
+            top: -100px;
+
+          }
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <!-- table of content 
+        body > .card > .hero    > img
+        
+                     > .content > .heading
+                                > .blabla
+                                > .box     > .ava         > img 
+                                           > .name-date   > .name
+                                                          > .date
+                                                        
+                                           > .icon-share  > img 
+                                           > .share-box 
+                                           
+  -->
+
+  <div class="card">
+    <div class="hero"><img src="images/drawers.jpg" alt="drawers"></div>
+
+    <div class="content">
+      <div class="heading">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</div>
+      <div class="blabla">Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.
+      </div>
+      <div class="box">
+        <div class="ava"><img src="images/avatar-michelle.jpg" alt="ava-michelle"></div>
+        <div class="name-date">
+          <div class="name">Michelle Appleton</div>
+          <div class="date">28 Jun 2020</div>
+        </div>
+
+        <div class="icon-share"><img src="images/icon-share.svg" alt=""></div>
+        
+        <div class="share-box">share</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nguyen Thanh Tung</a>.
+  </div>
+
+  <script>
+    let icon = document.body.querySelector(".icon-share");
+    let box = document.body.querySelector(".share-box");
+
+    icon.onclick = onOffBox;
+
+    function onOffBox() {
+      if (box.hidden) {
+        box.hidden = false;
+      } else {
+        box.hidden = true;
+      }
+
+    }
+
+  </script>
+</body>
+</html>
