@@ -10,25 +10,71 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      position: relative;
+
+    }
+    body {
+      background: #EEE;
+      color: grey;
+      font-family: Helvetica, sans-serif; 
+
+      /* child space */
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    body > * {
+      outline: 1px solid;
+
+      margin: 10px 0;
+    }
+    .icon {
+
+    }
+      .icon > img { 
+        width: 100%;
+        object-fit: contain;
+
+      }
+    .illustration {
+      width: 40vw;
+      
+    }
+      .illustration > img {
+        width: 100%;
+        object-fit: contain;
+      }
+
+
+
   </style>
 </head>
 <body>
+  <!-- 
+    body > .icon        > img
+         >  header
+         > p.blabla
+         > .subcribe
+         > .ilustration > img
+         > .social
+         > copyright
+   -->
+   <div class="icon"><img src="images/logo.svg" alt="logo"></div>
+   <header>We are launching soon!</header>
+   <p class="blabla">Subscribe and get notified</p>
+   <div class="subcribe">Notify Me</div>
+   <div class="illustration"><img src="images/illustration-dashboard.png" alt="illustration"></div>
+   <div class="social"></div>
+   <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
+  
 
-  We are launching soon!
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </body>
 </html>
