@@ -51,9 +51,51 @@
 
 
     .trial-content {
+      /* stand */
+      background-color: black;
+
       flex: 1 1 50%;
 
+      /* child space */
+      padding: 10px;
     }
+      .trial-content > * { 
+        outline: 1px solid grey;
+
+        /* sibling space */
+        margin: 30px 0;
+
+      }
+      .trial-content .ad {
+        padding: 10px 20px;
+
+        display: grid;
+        place-items: center;
+
+      }
+      .trial-content .trial-form {
+        display: flex;
+        flex-direction: column;
+
+        /* child space */
+        padding: 10px;
+
+
+      }
+        .trial-form > * {
+          outline: 1px solid grey;
+
+          margin: 30px 0;
+
+          padding: 10px 20px;
+
+        }
+        .trial-form .term {
+          margin-top: 0px;
+          
+        }
+
+
 
 
     .attribution { font-size: 11px; text-align: center; }
@@ -64,7 +106,11 @@
 <!-- 
   body > .content       > header
                         > p.blabla
-       > .trial-content 
+
+       > .trial-content > .ad
+                        > form.trial-form > input * 4 
+                                          > button
+                                          > p.term
  -->  
 
   <div class="content">
@@ -73,16 +119,16 @@
       but understanding how developers think is invaluable.</p>
   </div>
   <div class="trial-content">
-    Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
+    <div class="ad">Try it free 7 days then $20/mo. thereafter</div>
+    <form action="#" class="trial-form">
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="text" placeholder="Email Address">
+      <input type="text" placeholder="Password">
+      <button>Claim your free trial</button>
+      <p class="term">By clicking the button, you are agreeing to our Terms and Services</p>
+    </form>
+  
   </div>
   
 </body>
