@@ -153,22 +153,34 @@ form input.submited {
     </p>
   </footer> -->
   <script>
-    const pattern = document.body.querySelector(".pattern");
-    const hero = document.body.querySelector(".hero");
+    // const pattern = document.body.querySelector(".pattern");
+    // const hero = document.body.querySelector(".hero");
     const inputForm = document.body.querySelector("form input");
     const errorIcon = document.body.querySelector("form .error-icon");
+    const button = document.body.querySelector("button");
 
-    pattern.onclick = function() {
-      inputForm.classList.toggle("error");
-      errorIcon.classList.toggle("error");
+    button.onclick = validation;
+
+
+
+    function validation() {
+      let email = document.body.querySelector("form input").value;
+      let validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (email.match(validEmail)) {
+        inputForm.classList.remove("error")
+        errorIcon.classList.remove("error")
+        inputForm.classList.add("submited")
+
+      } else {
+        inputForm.classList.remove("submited");
+        inputForm.classList.add("error");
+        errorIcon.classList.add("error");
+
+      }
+
 
     }
-
-    hero.onclick = function() {
-      inputForm.classList.toggle("submited")
-
-    }
-
 
   </script>
 </body>
