@@ -65,6 +65,24 @@
         .content .blabla {
           margin-bottom: 30px;
         }
+          .content form .error-icon {
+            position: absolute;
+
+            top: 0;
+            left: 150px;
+
+            display: none;
+          }
+
+/* error state */
+form input.error {
+  outline: 1px solid red;
+
+}
+form .error-icon.error {
+  display: block;
+
+}
 
 
 
@@ -90,10 +108,12 @@
 <body>
   <!-- 
       body > .pattern > img
-                      > .content > .logo > img
+                      > .content > .logo    > img
                                  > header
                                  > p.blabla
-                                 > 
+                                 > form     >  input 
+                                            >  button > img 
+                                            >  .error > img 
 
            > .hero    > img   
    -->
@@ -108,7 +128,11 @@
       <p class="blabla">Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-      Email Address
+      <form action="#">
+        <input type="text" placeholder="Email Address">
+        <button><img src="images/icon-arrow.svg" alt="arrow"></button>
+        <div class="error-icon"><img src="images/icon-error.svg" alt="error"></div>
+      </form>  
     </div>
   </div>
   <div class="hero"><img src="images/hero-desktop.jpg" alt="hero"></div>
@@ -120,5 +144,17 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script>
+    const pattern = document.body;
+    const inputForm = document.body.querySelector("form input");
+    const errorIcon = document.body.querySelector("form .error-icon");
+
+    pattern.onclick = function() {
+      inputForm.classList.toggle("error");
+      errorIcon.classList.toggle("error");
+
+    }
+
+  </script>
 </body>
 </html>
