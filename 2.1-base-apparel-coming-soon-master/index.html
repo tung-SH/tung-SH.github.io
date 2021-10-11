@@ -65,6 +65,9 @@
         .content .blabla {
           margin-bottom: 30px;
         }
+          .content form input {
+            border: 2px solid black;
+          }
           .content form .error-icon {
             position: absolute;
 
@@ -76,12 +79,17 @@
 
 /* error state */
 form input.error {
-  outline: 1px solid red;
+  border-color: red;
 
 }
 form .error-icon.error {
   display: block;
 
+}
+
+/* submited state */
+form input.submited {
+  border-color:  greenyellow;
 }
 
 
@@ -145,7 +153,8 @@ form .error-icon.error {
     </p>
   </footer> -->
   <script>
-    const pattern = document.body;
+    const pattern = document.body.querySelector(".pattern");
+    const hero = document.body.querySelector(".hero");
     const inputForm = document.body.querySelector("form input");
     const errorIcon = document.body.querySelector("form .error-icon");
 
@@ -154,6 +163,12 @@ form .error-icon.error {
       errorIcon.classList.toggle("error");
 
     }
+
+    hero.onclick = function() {
+      inputForm.classList.toggle("submited")
+
+    }
+
 
   </script>
 </body>
