@@ -85,15 +85,52 @@
         .trial-form > * {
           outline: 1px solid grey;
 
-          margin: 30px 0;
+          margin: 20px 0;
 
           padding: 10px 20px;
 
         }
+        .trial-form .error-icon {
+          margin: 0;
+          width: 0;
+          height: 0;
+          visibility: hidden;
+
+        }
+          .trial-form img {
+            position: absolute;
+            right: -660px;
+            top: -53px;
+            visibility: visible;
+            display: none;
+          }
         .trial-form .term {
           margin-top: 0px;
           
         }
+
+/* error state */
+.error-icon.error {
+  display: block;
+
+}
+input[placeholder="First Name"].error {
+  border-color: red;
+
+}
+input[placeholder="Last Name"].error {
+  border-color: red;
+  
+}
+input[placeholder="Email Address"].error {
+  border-color: red;
+  
+}
+input[placeholder="Password"].error {
+  border-color: red;
+  
+}
+
 
 
 
@@ -108,7 +145,7 @@
                         > p.blabla
 
        > .trial-content > .ad
-                        > form.trial-form > input * 4 
+                        > form.trial-form > (input + img) *4
                                           > button
                                           > p.term
  -->  
@@ -121,15 +158,56 @@
   <div class="trial-content">
     <div class="ad">Try it free 7 days then $20/mo. thereafter</div>
     <form action="#" class="trial-form">
-      <input type="text" placeholder="First Name" required>
-      <input type="text" placeholder="Last Name" required>
-      <input type="text" placeholder="Email Address" required>
-      <input type="text" placeholder="Password" required>
+      <input type="text" placeholder="First Name">
+      <div class="error-icon"><img src="images/icon-error.svg" alt="error icon"></div>
+      <input type="text" placeholder="Last Name">
+      <div class="error-icon"><img src="images/icon-error.svg" alt="error icon"></div>
+      <input type="text" placeholder="Email Address">
+      <div class="error-icon"><img src="images/icon-error.svg" alt="error icon"></div>
+      <input type="text" placeholder="Password">
+      <div class="error-icon"><img src="images/icon-error.svg" alt="error icon"></div>
       <button>Claim your free trial</button>
       <p class="term">By clicking the button, you are agreeing to our Terms and Services</p>
     </form>
   
   </div>
   
+  <script>
+    const firstName = document.body.querySelector("input[placeholder='first Name']");
+    const lasttName = document.body.querySelector("input[placeholder='Last Name']");
+    const email = document.body.querySelector("input[placeholder='Email Address']");
+    const password = document.body.querySelector("input[placeholder='Password']");
+    const button = document.body.querySelector("button");
+
+    button.onclick = validation;
+
+    function validation() {
+      let firstNameValue = document.body.querySelector("input[placeholder='first Name']").value;
+      let lasttNameValue = document.body.querySelector("input[placeholder='Last Name']").value;
+      let emailValue = document.body.querySelector("input[placeholder='Email Address']").value;
+      let passwordValue = document.body.querySelector("input[placeholder='Password']").value;
+
+      let validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (firstnameValue === "") {
+        firstName.classList.add("error");
+
+      }
+      if (firstnameValue === "") {
+        firstName.classList.add("error");
+
+      }
+      if (firstnameValue === "") {
+        firstName.classList.add("error");
+
+      }
+      if (firstnameValue === "") {
+        firstName.classList.add("error");
+
+      }
+      
+    }
+    
+  </script>
 </body>
 </html>
