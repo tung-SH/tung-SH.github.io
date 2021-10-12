@@ -43,6 +43,11 @@
         object-fit: contain;
 
       }
+
+    form input {
+      border: 1px solid;
+
+    }
     .illustration {
       width: 40vw;
       
@@ -52,6 +57,16 @@
         object-fit: contain;
       }
 
+
+/* error state */
+form input.error {
+  border-color: red;
+
+}
+/* submited state */
+form input.submited {
+  border-color: yellowgreen;
+}
 
 
   </style>
@@ -80,6 +95,28 @@
    <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
   
 
+   <script>
+     const btn = document.body.querySelector("button");
+     const input = document.body.querySelector("input");
+
+
+     btn.onclick = validation;
+
+     function validation() {
+       let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+       let valueEmail = document.body.querySelector("input").value;
+
+      input.classList.remove("error");
+      input.classList.remove("submited");
+       if (valueEmail.match(pattern)) {
+         input.classList.add("submited");
+
+       } else {
+         input.classList.add("error");
+       }
+     }
+
+   </script>
 
 </body>
 </html>
