@@ -121,7 +121,7 @@ form input.submited {
                                  > p.blabla
                                  > form     >  input 
                                             >  button      > img 
-                                            >  .error-icno > img 
+                                            >  .error-icon > img 
 
            > .hero    > img   
    -->
@@ -163,16 +163,14 @@ form input.submited {
       let validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
       let currentEmailValue = document.body.querySelector("input").value;
       
+      input.className = "";
+      errorIcon.className = 'error-icon';
 
       if (currentEmailValue.match(validEmail)) {
-        input.classList.remove("error")
-        errorIcon.classList.remove("error")
         input.classList.add("submited")
-
       } else {
-        input.classList.remove("submited");
-        input.classList.add("error");
         errorIcon.classList.add("error");
+        input.classList.add("error")
 
       }
 
