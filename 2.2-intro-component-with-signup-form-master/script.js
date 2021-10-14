@@ -2,7 +2,7 @@
 const button = document.body.querySelector('button');
 
 button.addEventListener('click', e => {
-    e.preventDefault;
+    e.preventDefault();
     checkInputs();
 });
 
@@ -39,8 +39,8 @@ const lName = document.body.querySelector('input[placeholder="Last Name"]');
 const email = document.body.querySelector('input[placeholder="Email Address"]');
 const password = document.body.querySelector('input[placeholder="Password"]');
 
-function setError(elem) {
-    elem.classList.add('error')
+function setError(any) {
+    any.classList.add('error')
 
 }
 
