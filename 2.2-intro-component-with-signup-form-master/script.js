@@ -8,7 +8,7 @@ button.addEventListener('click', e => {
 
 
 // level 2
-fucntion checkInputs() {
+function checkInputs() {
     const fNameValue = document.body.querySelector('input[placeholder="First Name"]').value;
     const lNameValue = document.body.querySelector('input[placeholder="Last Name"]').value;
     const emailValue = document.body.querySelector('input[placeholder="Email Address"]').value;
