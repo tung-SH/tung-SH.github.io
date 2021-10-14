@@ -1,4 +1,4 @@
-// main program - level 3
+// main program - level 1
 const button = document.body.querySelector('button');
 
 button.addEventListener('click', e => {
@@ -33,7 +33,7 @@ function checkInputs() {
     }
 }
 
-// level 1
+// level 3
 const fName = document.body.querySelector('input[placeholder="First Name"]');
 const lName = document.body.querySelector('input[placeholder="Last Name"]');
 const email = document.body.querySelector('input[placeholder="Email Address"]');
