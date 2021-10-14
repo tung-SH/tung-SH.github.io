@@ -64,7 +64,7 @@ form input.error {
 
 }
 /* submited state */
-form input.submited {
+form input.Ok {
   border-color: yellowgreen;
 }
 
@@ -95,29 +95,7 @@ form input.submited {
    <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
   
 
-   <script>
-     const btn = document.body.querySelector("button");
-     const input = document.body.querySelector("input");
-
-
-     btn.onclick = validation;
-
-     function validation() {
-       let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-       let valueEmail = document.body.querySelector("input").value;
-
-      input.classList.remove("error");
-      input.classList.remove("submited");
-      
-       if (valueEmail.match(pattern)) {
-         input.classList.add("submited");
-
-       } else {
-         input.classList.add("error");
-       }
-     }
-
-   </script>
+   <script src="script.js"></script>
 
 </body>
 </html>
