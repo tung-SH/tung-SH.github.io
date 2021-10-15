@@ -10,35 +10,111 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+      position: relative;
+
+    }
+    body {
+      background-color: #000;
+      color: grey;
+      font-family: Helvetica, sans-serif;
+
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    body > * {
+      outline: 1px solid grey;
+
+    }
+    .liner-scroll-points-container {
+      display: none;
+
+    }
+    header {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 20vh;
+      left: 50%;
+
+      /* child space */
+      padding: 10px;
+
+    }
+    header > * {
+      outline: 1px solid;
+
+      /* sibling space */
+      margin: 30px 0;
+    }
+
+
+    .card {
+      width: 50vw;
+      height: 30vh;
+
+
+      display: flex;
+
+      /* child space */
+      padding: 10px;
+    }
+      .card > * {
+        outline: 1px solid grey;
+
+        flex: 1 1 50%;
+      }
+      
+
+
+
+
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+<!-- 
+    body > header   >  .line * 2
 
-  Bill
+         > .card    >  .bill-content 
+                    >  .tip-content
+ -->
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <header>
+    <div class="line">spli</div>
+    <div class="line">tter</div>
+  </header>
+  <div class="card">
+    <div class="bill-content">
+      Bill
 
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+      Select Tip %
+      5%
+      10%
+      15%
+      25%
+      50%
+      Custom
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      Number of People
+    </div>
+    <div class="tip-content">
+      Tip Amount
+      / person
+  
+      Total
+      / person
+  
+      Reset
+    </div>
   </div>
+  
+
 </body>
 </html>
