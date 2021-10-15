@@ -41,9 +41,6 @@
         outline: 1px solid grey;
 
       }
-      .card .image {
-
-      }
       .card .faq {
         /* child space */
         padding: 10px;
@@ -74,14 +71,15 @@
               top: 6px;
               
             }
-            .card .ques img.onOff {
-              transform: rotate(-180deg);
+/* on-off state */
+.card .ques img.on-off {
+  transform: rotate(-180deg);
 
-            }
-            .card .ans.onOff {
-              display: none;
+}
+.card .ans.on-off {
+  display: none;
 
-            }
+}
            
           
 
@@ -154,21 +152,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
-  <script>
-    let quesEls = document.querySelectorAll(".ques");
-    let ansEls = document.querySelectorAll(".ans");
-    let imgIcon = document.querySelectorAll(".ques img");
+  <script src="script.js"></script>
 
-    for (let i = 0; i < quesEls.length; i++) {
-      quesEls[i].onclick = onOffAns;
-
-      function onOffAns() {
-        ansEls[i].classList.toggle('onOff');
-        imgIcon[i].classList.toggle("onOff");
-
-      }
-    }
-
-  </script>
 </body>
 </html>
