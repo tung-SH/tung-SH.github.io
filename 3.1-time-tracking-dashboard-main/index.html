@@ -50,7 +50,30 @@
       } 
       .main {
         grid-row: 1 / 3;
+
+        /* child space */
+        padding: 10px;
+
       }
+        .main > * {
+          outline: 1px solid grey;
+
+        }
+        .main .report {
+          height: 65%;
+
+        }
+        .main .report-list {
+          /* child space */
+          padding: 10px;
+
+        }
+          .main li {
+            outline: 1px solid grey;
+
+            margin: 10px 0;
+
+          }
       
 
 
@@ -62,65 +85,65 @@
 </head>
 <body>
   <!-- 
-      body > .dashboard 
+      body > .dashboard >  .main  >  .report
+                                  >  .report-list
+
+
+                        >  .side * 6
+                        
    -->
   
   <div class="dashboard">
-    <div class="main">Report for
-      Jeremy Robson
-      Daily
-    Weekly
-    Monthly
+
+    <div class="main">
+      <div class="report">
+        Report for
+        Jeremy Robson
+      </div>
+      <ul class="report-list">
+        <li>Daily</li>
+        <li>Weekly</li>
+        <li>Monthly</li>
+      </ul>
     </div>
-    <div class="work">
+
+
+    <div class="side work">
       Work
-      5hrs <!-- daily -->
-      Previous - 7hrs <!-- daily -->
+      <div class="current">5hrs <!-- daily --></div>
+      <div class="previous">Previous - 7hrs <!-- daily --></div>
     </div>
-    <div class="play">
+
+    <div class="side play">
       Play
-      1hr <!-- daily -->
-      Previous - 2hrs <!-- daily -->
+      <div class="current">1hr <!-- daily --></div>
+      <div class="previous">Previous - 2hrs <!-- daily --></div> 
     </div>
-    <div class="study">
+
+    <div class="side study">
       Study
-      0hrs <!-- daily -->
-      Previous - 1hr <!-- daily -->
+      <div class="current">0hrs <!-- daily --></div>
+      <div class="previous">Previous - 1hr <!-- daily --></div>
     </div>
-    <div class="exercise">
+
+    <div class="side exercise">
       Exercise
-      1hr <!-- daily -->
-      Previous - 1hr <!-- daily -->
+      <div class="current">1hr <!-- daily --></div>
+      <div class="previous">Previous - 1hr <!-- daily --></div>
     </div>
-    <div class="social">
+
+    <div class="side social">
       Social
-      1hr <!-- daily -->
-      Previous - 3hrs <!-- daily -->
+      <div class="current">1hr <!-- daily --></div>
+      <div class="previous">Previous - 3hrs <!-- daily --></div>
     </div>
-    <div class="self-care">
+
+    <div class="side self-care">
       Self Care
-      0hrs <!-- daily -->
-      Previous - 1hr <!-- daily -->
+      <div class="current">0hrs <!-- daily --></div>
+      <div class="previous">Previous - 1hr <!-- daily --></div>
     </div>
     
-  
-    
-    
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
   
 
 
