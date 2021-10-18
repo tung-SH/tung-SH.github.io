@@ -82,8 +82,13 @@
 <!-- 
     body > header   >  .line * 2
 
-         > .card    >  .bill-content 
-                    >  .tip-content
+         > .card    >  .tip-content
+
+                    >  .result-content  >  .tip-content * 2 >  p 
+                                                            >  .result
+                                        >  button 
+
+
  -->
 
   <header>
@@ -91,28 +96,38 @@
     <div class="line">tter</div>
   </header>
   <div class="card">
-    <div class="bill-content">
-      label
-      Bill
-
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-  
-      Number of People
-    </div>
     <div class="tip-content">
-      Tip Amount
-      / person
+      <div class="bill">
+        Bill
+      </div>
+      <div class="tip-percent">
+        Select Tip %
+        5%
+        10%
+        15%
+        25%
+        50%
+        Custom
+      </div>
+      <div class="num-people">
+        Number of People
+      </div>
+    </div>
+    <div class="result-content">
+      <div class="tip-content">
+        <p>Tip Amount
+          / person</p>
+        <div class="result"></div>
+      </div>
+      <div class="tip-content">
+        <p>Total
+          / person</p>
+        <div class="result"></div>
+      </div>
+
+      <button>Reset</button>
   
-      Total
-      / person
-  
-      Reset
+      
     </div>
   </div>
   
