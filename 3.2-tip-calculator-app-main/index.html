@@ -54,8 +54,11 @@
 
 
     .card {
+      /* stand */
+      background: white;
+
       width: 50vw;
-      height: 30vh;
+      min-height: 30vh;
 
 
       display: flex;
@@ -68,6 +71,59 @@
 
         flex: 1 1 50%;
       }
+      .right {
+        /* child space */
+        padding: 10px;
+
+      }
+        .right > * {
+          outline: 1px solid grey;
+
+          margin: 5px 0;
+        }
+        .right :where(.bill, .num-people) input {
+          display: block;
+
+        }
+          .right .tip-percent ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 100px;
+            grid-gap: 10px;
+
+          }
+            .right .tip-percent ul > * {
+              outline: 1px solid grey;
+
+              display: grid;
+              place-items: center;
+
+            }
+      
+      
+      .left {
+        /* child space */
+        padding: 10px;
+
+      }
+        .left > * {
+          outline: 1px solid grey;
+
+          margin: 15px 0;
+
+        }
+        .left .tip-left {
+          display: flex;
+          justify-content: space-between;
+
+        }
+        .left button {
+          width: 100%;
+          padding: 10px 20px;
+          outline: none;
+          
+        }
       
 
 
@@ -82,10 +138,19 @@
 <!-- 
     body > header   >  .line * 2
 
-         > .card    >  .tip-content
+         > .card    >  .right           >  .bill          >  label 
+                                                          >  input
 
-                    >  .result-content  >  .tip-content * 2 >  p 
-                                                            >  .result
+                                        >  .tip-percent   >  p.label 
+                                                          >  ul       >  li * 5 
+                                                                      >  li      >  input 
+
+                                        >  .num-people    >  label  
+                                                          >  input                                
+
+
+                    >  .left            >  .tip-left * 2  >  p 
+                                                          >  .result
                                         >  button 
 
 
@@ -96,33 +161,39 @@
     <div class="line">tter</div>
   </header>
   <div class="card">
-    <div class="tip-content">
+    <div class="right">
       <div class="bill">
-        Bill
+        <label for="bill-form">Bill</label>
+        <input id="bill-form" type="text" placeholder="0">
       </div>
       <div class="tip-percent">
-        Select Tip %
-        5%
-        10%
-        15%
-        25%
-        50%
-        Custom
+        <p class="label">Select Tip %</p>
+        <ul>
+          <li>5%</li>
+          <li>10%</li>
+          <li>15%</li>
+          <li>25%</li>
+          <li>50%</li>
+          <li>
+            <input type="text" placeholder="Custom">
+          </li>
+        </ul>
       </div>
       <div class="num-people">
-        Number of People
+        <label for="num-people-form">Number of People</label>
+        <input id="num-people-form" type="text" placeholder="0">
       </div>
     </div>
-    <div class="result-content">
-      <div class="tip-content">
+    <div class="left">
+      <div class="tip-left">
         <p>Tip Amount
           / person</p>
-        <div class="result"></div>
+        <div class="result">0.00</div>
       </div>
-      <div class="tip-content">
+      <div class="tip-left">
         <p>Total
           / person</p>
-        <div class="result"></div>
+        <div class="result">0.00</div>
       </div>
 
       <button>Reset</button>
