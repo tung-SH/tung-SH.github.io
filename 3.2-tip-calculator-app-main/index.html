@@ -115,11 +115,17 @@
           margin: 15px 0;
 
         }
-        .left .tip-left {
+        .left .tip-amount {
           display: flex;
           justify-content: space-between;
 
         }
+        .left .total {
+          display: flex;
+          justify-content: space-between;
+
+        }
+
         .left button {
           width: 100%;
           padding: 10px 20px;
@@ -151,8 +157,14 @@
                                                           >  input                                
 
 
-                    >  .left            >  .tip-left * 2  >  p 
-                                                          >  .result
+                    >  .left            >  .tip-amount  >  p
+                                                        >  .result
+
+
+                                        > .total        >  p              
+                                                        >  .result
+
+
                                         >  button 
 
 
@@ -187,12 +199,12 @@
       </div>
     </div>
     <div class="left">
-      <div class="tip-left">
+      <div class="tip-amount">
         <p>Tip Amount
           / person</p>
         <div class="result">0.00</div>
       </div>
-      <div class="tip-left">
+      <div class="total">
         <p>Total
           / person</p>
         <div class="result">0.00</div>
