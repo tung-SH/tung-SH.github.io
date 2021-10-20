@@ -1,9 +1,16 @@
 // 
 const button = document.body.querySelector('.left > button');
 
-button.addEventListener('click', () => {
+while(true) {
     calculateTip()
-})
+
+    button.addEventListener('click', () => {
+        resetCalculate()
+    })
+
+    let a = 1;
+    if (a == 2) break;
+}
 
 
 // 
@@ -14,17 +21,22 @@ function calculateTip() {
 
 
     let tipAmountValue = billValue * tipPercentValue / 100 / numPeople;
-    let totalMoneyValue = +billValue + +tipAmountValue ;
+    let totalValue = +billValue + +tipAmountValue ;
     
     let label = 'checking the value of tipAmountValue and totalMoneyValue'
     console.group(label);
     console.info(tipAmountValue);
-    console.info(totalMoneyValue);
+    console.info(totalValue);
     console.groupEnd(label)
 
-    setResult(tipAmountValue, totalMoneyValue);
+    setResult(tipAmountValue, totalValue);
 }
 
+function resetCalculate() {
+    document.body.querySelector('.bill input').value = 0;
+    document.body.querySelector('.tip-percent input').value = 0;
+    document.body.querySelector('.num-people input').value = 0;
+}
 
 // 
 const tipAmount = document.body.querySelector('.tip-amount .result');
