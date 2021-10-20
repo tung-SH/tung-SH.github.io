@@ -8,8 +8,6 @@ while(true) {
         resetCalculate()
     })
 
-    let a = 1;
-    if (a == 2) break;
 }
 
 
