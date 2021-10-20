@@ -1,5 +1,5 @@
 // 
-const button = document.body.querySelector('.left button');
+const button = document.body.querySelector('.left > button');
 
 button.addEventListener('click', () => {
     calculateTip()
@@ -12,10 +12,12 @@ function calculateTip() {
     let tipPercentValue = document.body.querySelector('.tip-percent input').value;
     let numPeople = document.body.querySelector('.num-people input').value;
 
-    let tipAmount = billValue * (tipPercentValue + 100) / 100 / numPeople;
-    let totalMoney = billValue + tipAmount ;
 
-    setResult(tipAmount, totalMoney);
+    let tipAmountValue = billValue * tipPercentValue / 100 / numPeople;
+    let totalMoneyValue = billValue + tipAmount ;
+
+    
+    setResult(tipAmountValue, totalMoneyValue);
 }
 
 
