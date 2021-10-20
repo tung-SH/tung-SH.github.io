@@ -14,9 +14,14 @@ function calculateTip() {
 
 
     let tipAmountValue = billValue * tipPercentValue / 100 / numPeople;
-    let totalMoneyValue = billValue + tipAmount ;
-
+    let totalMoneyValue = +billValue + +tipAmountValue ;
     
+    let label = 'checking the value of tipAmountValue and totalMoneyValue'
+    console.group(label);
+    console.info(tipAmountValue);
+    console.info(totalMoneyValue);
+    console.groupEnd(label)
+
     setResult(tipAmountValue, totalMoneyValue);
 }
 
