@@ -150,10 +150,10 @@
                                                           >  input
 
                                         >  .tip-percent   >  p.label 
-                                                          >  ul       >  li * 5 
-                                                                      >  li      >  input 
+                                                          >  div       >  button.tip-button * 5 
+                                                                       >  .tip-custom      >  input 
 
-                                        >  .num-people    >  labe l  
+                                        >  .num-people    >  label  
                                                           >  input                                
 
 
@@ -165,7 +165,7 @@
                                                         >  .result
 
 
-                                        >  button 
+                                        >  button.reset-button 
 
 
  -->
@@ -183,14 +183,14 @@
       <div class="tip-percent">
         <p class="label">Select Tip %</p>
         <ul>
-          <li>5%</li>
-          <li>10%</li>
-          <li>15%</li>
-          <li>25%</li>
-          <li>50%</li>
-          <li>
+          <button class="tip-button">5%</button>
+          <button class="tip-button">10%</button>
+          <button class="tip-button">15%</button>
+          <button class="tip-button">25%</button>
+          <button class="tip-button">50%</button>
+          <div class="tip-custom">
             <input type="text" placeholder="Custom">
-          </li>
+          </div>
         </ul>
       </div>
       <div class="num-people">
