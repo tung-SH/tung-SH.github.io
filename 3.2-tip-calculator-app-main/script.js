@@ -10,6 +10,7 @@ let peopleValue = 1;
 const tipAmount = document.body.querySelector(".tip-amount .result")
 const total = document.body.querySelector('.total .result')
 
+calculateTip()
 bill.addEventListener("input", setBillValue);
 tipButton.forEach(btn => {
     btn.addEventListener("click", setTipButtonValue)
@@ -17,7 +18,7 @@ tipButton.forEach(btn => {
 tipCustom.addEventListener('input', setCustomValue);
 numPeople.addEventListener("input", setPeopleValue);
 resetButton.addEventListener('click', reset);
-calculateTip()
+
 
 
 
