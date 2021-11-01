@@ -49,15 +49,13 @@ fetch('data.json')
 		// main program
 		timeFrames.addEventListener('click', e => {
 			if (e.target.localName == 'a') {
-                ;
 				showStats(data, e.target.classList[0])
 			}
 		})
 
 		// default stats to show
-		showStats(data, 'daily')
+		showStats(data, 'weekly')
 	})
-	.catch(e => console.log(e))
 
 
 // 
