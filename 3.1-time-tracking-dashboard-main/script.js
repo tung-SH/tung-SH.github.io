@@ -41,25 +41,12 @@
 // 7hrs <!-- monthly -->
 // Previous - 11hrs <!-- monthly -->
 
-const sides = document.body.querySelectorAll(".side")
 const timeFrames = document.body.querySelector('.report-list')
-
-const showStats = (data, timeFrame) => {
-    let context
-	if (timeFrame == 'monthly') context = 'Month'
-	if (timeFrame == 'weekly') context = 'Week'
-	if (timeFrame == 'daily') context = 'Day'
-
-    for (let card in sides) {
-		const cardCurrentTime = sides[card].querySelector('.current')
-		const cardPreviousTime = sides[card].querySelector('.previous')
-		cardCurrentTime.textContent = data[card].timeframes[timeFrame].current + 'hrs'
-		cardPreviousTime.textContent = `Last ${context} - ${data[card].timeframes[timeFrame].previous}hrs`
-	}
-}
-fetch('https://raw.githubusercontent.com/Liltanie/time-tracking-dashboard/master/code/data.json')
+fetch('data.json')
 	.then(res => res.json())
 	.then(data => {
+
+		// main program
 		timeFrames.addEventListener('click', e => {
 			if (e.target.localName == 'a') {
                 ;
@@ -68,6 +55,24 @@ fetch('https://raw.githubusercontent.com/Liltanie/time-tracking-dashboard/master
 		})
 
 		// default stats to show
-		showStats(data, 'monthly')
+		showStats(data, 'daily')
 	})
 	.catch(e => console.log(e))
+
+
+// 
+const sides = document.body.querySelectorAll(".side")
+	
+function showStats(data, timeFrame) {
+	let context
+	if (timeFrame == 'monthly') context = 'Month'
+	if (timeFrame == 'weekly') context = 'Week'
+	if (timeFrame == 'daily') context = 'Day'
+
+	for (let card in sides) {
+		const cardCurrentTime = sides[card].querySelector('.current')
+		const cardPreviousTime = sides[card].querySelector('.previous')
+		cardCurrentTime.textContent = data[card].timeframes[timeFrame].current + 'hrs'
+		cardPreviousTime.textContent = `Last ${context} - ${data[card].timeframes[timeFrame].previous}hrs`
+	}
+}
