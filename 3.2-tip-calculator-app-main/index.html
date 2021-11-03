@@ -146,19 +146,19 @@
 <!-- 
     body > header   >  .line * 2
 
-         > .card    >  .right           >  .bill          >  label 
+         > .card    >  .right           >  .bill          >  p 
                                                           >  input
 
                                         >  .tip-percent   >  p.label 
-                                                          >  div       >  button.tip-button * 5 
-                                                                       >  .tip-custom      >  input 
+                                                          >  ul        >  button.tip-button * 5 
+                                                                       >  .tip-custom           >  input 
 
-                                        >  .num-people    >  label  
+                                        >  .num-people    >  p
                                                           >  input                                
 
 
-                    >  .left            >  .tip-amount  >  p
-                                                        >  .result
+                    >  .left            > .tip-amount     >  p
+                                                          >  .result
 
 
                                         > .total        >  p              
@@ -170,53 +170,45 @@
 
  -->
 
-  <header>
-    <div class="line">spli</div>
-    <div class="line">tter</div>
-  </header>
-  <div class="card">
-    <div class="right">
-      <div class="bill">
-        <label for="bill-form">Bill</label>
-        <input id="bill-form" type="text" placeholder="0">
-      </div>
-      <div class="tip-percent">
-        <p class="label">Select Tip %</p>
-        <ul>
-          <button class="tip-button">5%</button>
-          <button class="tip-button">10%</button>
-          <button class="tip-button">15%</button>
-          <button class="tip-button">25%</button>
-          <button class="tip-button">50%</button>
-          <div class="tip-custom">
-            <input type="text" placeholder="Custom">
-          </div>
-        </ul>
-      </div>
-      <div class="num-people">
-        <label for="num-people-form">Number of People</label>
-        <input id="num-people-form" type="text" placeholder="1">
+<header>
+  <div class="line">spil</div>
+  <div class="line">tter</div>
+</header>
+
+<div class="card">
+  <div class="right">
+    <div class="bill">
+      <p>bill</p>
+      <input type="text" placeholder="0">
+    </div>
+    <div class="tip-percent">
+      <p>Select Tip %</p>
+      <div>
+        <button class="tip-button">5%</button>
+        <button class="tip-button">10%</button>
+        <button class="tip-button">15%</button>
+        <button class="tip-button">25%</button>
+        <button class="tip-button">50%</button>
+        <div class="tip-custom"><input type="text" placeholder="Custom"></div>
       </div>
     </div>
-    <div class="left">
-      <div class="tip-amount">
-        <p>Tip Amount
-          / person</p>
-        <div class="result">0.00</div>
-      </div>
-      <div class="total">
-        <p>Total
-          / person</p>
-        <div class="result">0.00</div>
-      </div>
-
-      <button>Reset</button>
-  
-      
+    <div class="num-people">
+      <p>Number of people</p>
+      <input type="text" placeholder="1">
     </div>
   </div>
-  
-  <script src="script.js"></script>
+  <div class="left">
+    <div class="tip-amount">
+      <p>Tip Amount / person</p>
+      <div class="result">0</div>
+    </div>
+    <div class="total">
+      <p>Total / person</p>
+      <div class="result">0</div>
+    </div>
+    <button class="reset-button">Reset</button>
+  </div>
+</div>
 
 </body>
 </html>
