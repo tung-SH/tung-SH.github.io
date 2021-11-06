@@ -49,9 +49,38 @@
       } 
     
     .card {
-      
+      /* child space */
+      padding: 10px;
     }
+      .card > * {
+        outline: 1px solid grey;
 
+      }
+      .pricing {
+        /* child space */
+        padding: 10px;
+      }
+        .pricing > * {
+          outline: 1px solid grey;
+
+          /* sibling space */
+          margin: 30px 0;
+        }
+        .pricing__views-permonth {
+          display: flex;
+          justify-content: space-between;
+        }
+
+      .info {
+        /* child space */
+        padding: 10px;
+
+        display: flex;
+        justify-content: space-between;
+      }
+        .info > * {
+          outline: 1px solid grey;
+        }
 
   </style>
 </head>
