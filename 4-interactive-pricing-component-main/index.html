@@ -57,10 +57,18 @@
 </head>
 <body>
   <!-- 
-        body > header   >   h1 
+        body > header   >   h1
                         >   p.blabla
 
-             > .card    
+             > .card    >  .pricing    >    .pricing__views-permonth  >   .pricing__views
+                                                                      >   .pricing__permonth   >    span.result
+
+                                       >    .pricing__input
+                                       >    .pricing__info
+
+                        >  .info       >    .info__qualities          >   .info__quality * 3
+                                       >    button.info__btn   
+
    -->
 
 
@@ -70,17 +78,32 @@
   </header>
 
   <div class="card">
-    Pageviews
-  $ /month
+    <div class="pricing">
+      <div class="pricing__views-permonth">
+        <div class="pricing__views">Pageviews</div>
+        <div class="pricing__permonth">$<span class="result"></span>/month</div>
+      </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+      <div class="pricing__input">
+        <input type="range" min="20" max="100" step="20">
+      </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+      <div class="pricing__info">
+        Monthly Billing
+        Yearly Billing 25% discount
+      </div>
+    </div>
 
-  Start my trial
+    <div class="info">
+      <ul class="info__qualities">
+        <li class="info__quality">Unlimited websites</li>
+        <li class="info__quality">100% data ownership</li>
+        <li class="info__quality">Email reports</li>
+      </ul>
+      
+      <button class="info-btn">Start my trial</button>  
+    </div>
+  
   </div>
   
    
