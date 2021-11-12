@@ -1,0 +1,29 @@
+.container {
+    /* outline: 1px solid grey; */
+
+    min-height: 40vh;
+
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+    .website {
+        /* outline: 1px solid grey; */
+        margin: 10px 0;
+        width: 40%;
+
+        border-radius: 50px;
+        background: #ffffff;
+        box-shadow:  20px 20px 60px #d9d9d9,
+                    -20px -20px 60px #ffffff;
+    }
+        .website a {
+            /* background-color: black; */
+            display: block;
+
+            width: 100%;
+
+    
+            text-align: center;
+            padding: 10px 20px;
+        }
