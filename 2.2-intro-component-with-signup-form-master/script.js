@@ -1,13 +1,20 @@
-// main program - level 1
+/***************************************************
+ * 
+ *              CHECK 4 INPUTS
+ * 
+ */
+
+// input
 const button = document.body.querySelector('button');
 
-button.addEventListener('click', e => {
-    e.preventDefault();
+button.addEventListener('click', (e) => {
+    // bước preventDefault() ni ko thể bỏ
+    e.preventDefault(); 
     checkInputs();
 });
 
 
-// level 2
+// process
 function checkInputs() {
     const fNameValue = document.body.querySelector('input[placeholder="First Name"]').value;
     const lNameValue = document.body.querySelector('input[placeholder="Last Name"]').value;
@@ -33,14 +40,14 @@ function checkInputs() {
     }
 }
 
-// level 3
+// output
 const fName = document.body.querySelector('input[placeholder="First Name"]');
 const lName = document.body.querySelector('input[placeholder="Last Name"]');
 const email = document.body.querySelector('input[placeholder="Email Address"]');
 const password = document.body.querySelector('input[placeholder="Password"]');
 
-function setError(any) {
-    any.classList.add('error')
+function setError(el) {
+    el.classList.add('error')
 
 }
 
