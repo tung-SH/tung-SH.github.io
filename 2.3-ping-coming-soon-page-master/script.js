@@ -1,11 +1,18 @@
-// main program - level 1
+/***************************************************
+ * 
+ *              CHECK EMAIL
+ * 
+ */
+
+
+// input
 const button = document.body.querySelector('button');
 
 button.addEventListener('click', () => {
     checkEmail()
 })
 
-// level 2
+// process
 function checkEmail() {
     const emailValue = document.body.querySelector('input').value
     let validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -19,7 +26,7 @@ function checkEmail() {
     }
 }
 
-// level 3
+// output
 const input = document.body.querySelector('input');
 
 function setOk() {
