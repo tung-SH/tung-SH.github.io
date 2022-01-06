@@ -1,10 +1,17 @@
+/*************************************************
+ * 
+ *          EMAIL VALIDATION FORM
+ * 
+ */
+
+
+// input
 const button = document.body.querySelector('button');
 
-// main program
 button.addEventListener('click', emailValidation);
 
 
-// 
+// process
 function emailValidation() {
     const inputValue = document.body.querySelector('input').value;
     let validEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -19,7 +26,7 @@ function emailValidation() {
 }
 
 
-// 
+// output
 const input = document.body.querySelector('input');
 const errorIcon = document.body.querySelector('.error-icon');
 
