@@ -1,4 +1,10 @@
-// main program - level 1
+/**************************************************
+ * 
+ *              TOGGLE ANSWER SECTION
+ * 
+ */
+
+// input
 const ques = document.body.querySelectorAll('.ques')
 
 for (let i = 0; i < ques.length; i++) {
@@ -9,7 +15,7 @@ for (let i = 0; i < ques.length; i++) {
 
 
 
-// level 2
+// ouput
 const img = document.body.querySelectorAll('.ques img')
 const ans = document.body.querySelectorAll('.ans')
 
