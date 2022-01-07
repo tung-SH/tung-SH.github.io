@@ -1,4 +1,9 @@
-// 
+/*********************************************************
+ * 
+ *                  CALCULATE TIP MONEY
+ * 
+ */
+// input  
 const bill = document.body.querySelector('.bill')
 const tipButton = document.body.querySelectorAll(".tip-button")
 const tipCustom = document.body.querySelector(".tip-custom")
