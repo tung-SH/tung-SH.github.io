@@ -12,7 +12,7 @@ button.addEventListener('click', checkInputs);
 
 // process
 function checkInputs(event) {
-    event.preventDefault();
+    event.preventDefault()
 
     const fNameValue = document.body.querySelector('input[placeholder="First Name"]').value;
     const lNameValue = document.body.querySelector('input[placeholder="Last Name"]').value;
