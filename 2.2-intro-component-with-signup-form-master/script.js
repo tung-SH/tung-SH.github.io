@@ -7,15 +7,13 @@
 // input
 const button = document.body.querySelector('button');
 
-button.addEventListener('click', (e) => {
-    // bước preventDefault() ni ko thể bỏ
-    e.preventDefault(); 
-    checkInputs();
-});
+button.addEventListener('click', checkInputs);
 
 
 // process
-function checkInputs() {
+function checkInputs(event) {
+    event.preventDefault();
+
     const fNameValue = document.body.querySelector('input[placeholder="First Name"]').value;
     const lNameValue = document.body.querySelector('input[placeholder="Last Name"]').value;
     const emailValue = document.body.querySelector('input[placeholder="Email Address"]').value;
