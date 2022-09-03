@@ -3,7 +3,19 @@ const quotes = [
               "Cần 1 tài năng xuất chúng để che giấu đi 1 tài năng.", 
               "Loài người là sinh vật biết trả giá, không loài vật nào khác làm được điều này. Không có con chó nào đi đổi xương với con chó khác", 
               "Không nên quá phản cảm chuyện người khác che giấu sự thật với chúng ta khi bản thân chúng ta cũng che giấu rất nhiều với người khác",
-              "Có 2 loại dối trá. Một để che đậy sự thật trong quá khứ, một để đảm bảo lợi ích cho tương lai"
+              "Có 2 loại dối trá. Một để che đậy sự thật trong quá khứ, một để đảm bảo lợi ích cho tương lai",
+              "Không có gì nguy hiểm hơn bạn bè vô tri, thà rằng có kẻ thù thông minh",
+              "thiên tài chỉ đứng trên kẻ điên một nấc mà thôi.",
+              "Trong lúc khó khăn, phải giữ tâm thế bình thản.", 
+              "Xét về bản chất của tội lỗi, thì có hai đại tội: nóng vội và cẩu thả.", 
+              "Nhân tài cần phải được tạo ra.",
+              "Mọi thất bại là bước đệm để tới thành công.",
+              "Nghịch cảnh là con đường đầu tiên đi đến sự thật.",
+              "Nghi ngờ tất cả hay tin tưởng tất cả đều đơn giản, chẳng khác gì từ bỏ tư duy.",
+              "Tổn thương lặng lẽ sống ở nơi sâu thẳm của lồng ngực", 
+              "Đã sai mà ko sửa, vậy mới gọi là sai.",
+              
+
             ]
 
 window.addEventListener('DOMContentLoaded', randomQuote)
