@@ -6,6 +6,7 @@ const quotes = [
               "Có 2 loại dối trá. Một để che đậy sự thật trong quá khứ, một để đảm bảo lợi ích cho tương lai"
             ]
 
+window.addEventListener('DOMContentLoaded', randomQuote)
 /****************
  *      DI CHUYỂN SANG QUOTES KẾ TIẾP HAY TRƯỚC ĐÓ
  */
