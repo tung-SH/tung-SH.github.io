@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', randomQuote)
 // input
 const prevBtn = document.querySelector('button.prev-btn')
 const nextBtn = document.querySelector('button.next-btn')
-const quote = document.querySelector('p#info')
+const quote = document.querySelector('#info')
 
 prevBtn.addEventListener('click', prevQuote)
 nextBtn.addEventListener('click', nextQuote)
