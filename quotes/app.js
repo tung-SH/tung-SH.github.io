@@ -19,6 +19,13 @@ const quotes = [
             ]
 
 window.addEventListener('DOMContentLoaded', randomQuote)
+window.addEventListener('keydown', function(event) {
+    // console.log(1)
+    if (event.code == "Space") randomQuote()
+    if (event.code == "ArrowRight") nextQuote()
+    if (event.code == "ArrowLeft") prevQuote()
+
+})
 /****************
  *      DI CHUYỂN SANG QUOTES KẾ TIẾP HAY TRƯỚC ĐÓ
  */
