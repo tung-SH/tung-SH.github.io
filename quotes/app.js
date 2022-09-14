@@ -18,7 +18,12 @@ const quotes = [
 
             ]
 
+
+const audio = document.querySelector('audio')            
 window.addEventListener('DOMContentLoaded', randomQuote)
+window.addEventListener('DOMContentLoaded', function() {
+    audio.autoplay = true;
+})
 window.addEventListener('keydown', function(event) {
     // console.log(1)
     if (event.code == "Space") randomQuote()

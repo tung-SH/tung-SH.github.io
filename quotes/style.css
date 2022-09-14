@@ -274,4 +274,5 @@ main {
 
 audio {
   position: absolute;
+  /* display:block */
 }
